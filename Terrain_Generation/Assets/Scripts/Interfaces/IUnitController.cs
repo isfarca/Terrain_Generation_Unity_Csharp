@@ -1,25 +1,13 @@
-﻿public interface IMoveable<T>
-{
-    void Move(T speed);
-}
+﻿using System.Collections;
+using UnityEngine;
 
-public interface IWorkable
+public interface IUnitController
 {
-    void Mine();
-    void Build();
-}
+    void OnSelect();
 
-public interface IMelee<T>
-{
-    void Hit(T damage);
-}
+    void OnDeSelect();
 
-public interface IRanged<T>
-{
-    void ShootArrow(T damage);
-}
+    void OnRightClick(Vector3 cClick);
 
-public interface IDamagable<T>
-{
-    void TakeDamage(T damage);
+    IEnumerator OnHarvest(Vector3 cClick);
 }

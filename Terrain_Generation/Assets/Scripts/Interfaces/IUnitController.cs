@@ -18,3 +18,8 @@ public interface IRanged<T>
 {
     void ShootArrow(T damage);
 }
+
+public interface IDamagable<T>
+{
+    void TakeDamage(T damage);
+}

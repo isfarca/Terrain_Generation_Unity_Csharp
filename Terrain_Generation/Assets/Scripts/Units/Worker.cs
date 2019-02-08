@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Worker : MonoBehaviour, IMoveable<float>, IWorkable
+public class Worker : MonoBehaviour, IMoveable<float>, IWorkable, IDamagable<float>
 {
     public void Move(float speed)
     {
@@ -11,6 +11,10 @@ public class Worker : MonoBehaviour, IMoveable<float>, IWorkable
     }
 
     public void Build()
+    {
+    }
+
+    public void TakeDamage(float damage)
     {
     }
 }
